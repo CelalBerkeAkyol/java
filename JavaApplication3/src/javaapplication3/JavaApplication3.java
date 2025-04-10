@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.net.InetAddress;
 
 public class JavaApplication3 extends JFrame implements ActionListener {
     private final JTextField tf;
@@ -39,8 +40,7 @@ public class JavaApplication3 extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, "Please enter a valid domain name");
                 return;
             }
-            // IP bulma işlemleri buraya eklenecek.
-            // Örneğin: l.setText("IP: " + InetAddress.getByName(host).getHostAddress());
+            l.setText("IP: " + InetAddress.getByName(host).getHostAddress());
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "An error occurred: " + ex.getMessage());
